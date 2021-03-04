@@ -1,0 +1,14 @@
+<div *ngFor="let ele of data; trackBy: trackByFunc">
+  {{ ele.name }} {{ ele.speed }} {{ ele.date }}
+
+  <ng-container *ngIf="ele.name === 'key2'">
+    <label for="cars">Choose a car:</label>
+
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </ng-container>
+</div>
